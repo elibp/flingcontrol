@@ -29,8 +29,6 @@ local R_UPWARD_FORCE = 80
 local R_FLING_DURATION = 0.5
 local R_SPIN_SPEED = 70
 
-game:GetService("StarterGui"):SetCore("SendNotification",{["Fling Control"] = "Success!",["Text"] = "Made by Gent on ScriptBlox",["Duration"] = 20,["Button1"] = "Okay"})
-
 local function createGui()
     local screenGui = Instance.new("ScreenGui")
     screenGui.Parent = player.PlayerGui
@@ -163,3 +161,8 @@ player.CharacterAdded:Connect(function(newCharacter)
     humanoid = character:WaitForChild("Humanoid")
     createGui()
 end)
+
+--loadmsg--
+
+print("Made by Gent")
+game:GetService("StarterGui"):SetCore("SendNotification",{["Fling Control"] = "Success!",["Text"] = "Made by Gent on ScriptBlox",["Duration"] = 20,["Button1"] = "Okay"})
